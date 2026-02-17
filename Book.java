@@ -22,5 +22,14 @@ class Book
         title = bookTitle;
     }
 
-    // Add the methods here ...
+    // Accessor Method
+    public String getAuthor()
+    {
+        return author;
+    }
+    
+    public String getTitle()
+    {
+        return title;
+    }
 }
