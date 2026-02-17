@@ -14,18 +14,20 @@ class Book
     private int pages;
     private String refNumber;
     private int borrowed;
+    private boolean courseText;
 
     /**
      * Set the author and title fields when this object
      * is constructed.
      */
-    public Book(String bookAuthor, String bookTitle, int bookPages)
+    public Book(String bookAuthor, String bookTitle, int bookPages, boolean isCourseText)
     {
         author = bookAuthor;
         title = bookTitle;
         pages = bookPages;
         refNumber = "";
         borrowed = 0;
+        courseText = isCourseText;
     }
 
     // Accessor Method
@@ -39,17 +41,21 @@ class Book
         return title;
     }
     
-        public int getPages()
+    public int getPages()
     {
         return pages;
     }
-            public int getBorrowed()
+    public int getBorrowed()
     {
         return borrowed;
     }
-            public String getRefNumber()
+    public String getRefNumber()
     {
         return refNumber;
+    }
+    public boolean isCourseText()
+    {
+        return courseText;
     }
     public void setRefNumber(String ref)
     {
@@ -62,7 +68,7 @@ class Book
         System.out.println("Error: must be at least 3 characters!");
         }
     }
-        public void borrow()
+    public void borrow()
     {
         borrowed++;
     }
